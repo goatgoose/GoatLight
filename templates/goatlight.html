@@ -11,7 +11,12 @@
     <main role="main" class="container">
         <h1 class="mt-5">Goat Light</h1>
         <br>
-        <button id="light-button" type="button" class="btn btn-info">Turn light on</button>
+        {%  if is_on %}
+            <button id="light-button" type="button" class="btn btn-dark">Turn light off</button>
+        {% else %}
+            <button id="light-button" type="button" class="btn btn-info">Turn light on</button>
+        {% endif %}
+
     </main>
 
     <script src="/static/jquery-3.3.1.js"></script>

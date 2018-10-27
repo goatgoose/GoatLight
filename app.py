@@ -8,7 +8,7 @@ goat_light = GoatLight()
 
 @app.route('/')
 def hello_world():
-    return render_template("goatlight.html")
+    return render_template("goatlight.html", is_on=goat_light.is_on)
 
 
 @app.route('/light_on', methods=['POST'])
